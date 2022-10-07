@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TSWR Coding Academy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index_style.CSS')}}">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+
+ <style>
+     /* Float four columns side by side */
+.col {
+  float: left;
+  width: 30%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  width: 300px;                 /* Set width of cards */
+  display: flex;                /* Children use Flexbox */
+  flex-direction: column;       /* Rotate Axis */
+  border: 1px solid #46166b;    /* Set up Border */
+  border-radius: 4px;           /* Slightly Curve edges */
+  overflow: hidden;             /* Fixes the corners */
+  margin: 5px;  
+  margin-left: 100px;                /* Add space between cards */
+
+}
+
+.card-header {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 1px solid black;
+  background-color: #435d7d;
+  padding: 5px 10px;
+}
+
+.card-main {
+  display: flex;              /* Children use Flexbox */
+  flex-direction: column;     /* Rotate Axis to Vertical */
+  justify-content: center;    /* Group Children in Center */
+  align-items: center;        /* Group Children in Center (on cross axis) */
+  padding: 15px 0;            /* Add padding to the top/bottom */
+}
+
+.material-icons {
+  font-size: 36px;
+  color: #D32F2F;
+  margin-bottom: 5px;
+}
+
+.main-description {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+@media only screen and (max-width: 1000px){
+  .col{
+    width: 100%;
+    display: block;
+
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  .card{
+    width: 80%;
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+
+
+    
+  }
+}
+ </style> 
+
+
+
+</head>
+
+
+<body style="background:linear-gradient(45deg, #47cebe, #ef4a82);">
+
+  <div class="topbar">
+  <img style="width:100%;" src="{{url_for('static',filename='images/header.png')}}">
+ 
+</div>
+
+<!-- <div class="topbar">
+  <div class="logo">
+  <img style="height:100%;" src="{{url_for('static', filename='images/logo.png')}}"/>
+  </div>
+<div>
+  <h1><span><img class="image" src="{{url_for('static', filename='images/ronaldrose.jfif')}}"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><img class="image" src="{{url_for('static', filename='images/sabitha.png')}}"></span>&nbsp;<span style="color:white;">TSWR Coding Academy,</span><span style="font-size:1.5vw;color:white;">Moinabad.</span> <span><img class="image" src="{{url_for('static', filename='images/kcr.jfif')}}"></span><span class="ss"><img  src="{{url_for('static', filename='images/ss2.png')}}"></span></h1>
+</div>
+</div> -->
+<div>
+<div style="overflow: auto;width: 100%;">
+  <div class="menu">
+
+       <a href="{{url_for('indexPage')}}">
+       <i class="fa fa-home" style="font-size:20px"></i>
+        <b>Home</b>
+       </a>
+     
+       <a href="{{url_for('academicStaffPage')}}">
+       <i class='fas fa-chalkboard-teacher' style='font-size:20px'></i>Academic Staff
+        
+       </a>
+
+       <a href="{{url_for('codingStaffPage')}}">
+       <i class='fas fa-user-graduate' style='font-size:20px'></i>
+       Coding Staff
+       </a>
+
+       <a href="{{url_for('timetablePage')}}"><i class='far fa-calendar-alt' style='font-size:20px'></i>
+       Time Table</a>
+
+       <a href="{{url_for('houseMasterLoginPage')}}"><i class='fas fa-university' style='font-size:20px'></i>
+       Class Bank</a>
+
+        <a class="dropdown-btn"><i class='fas fa-vote-yea' style='font-size:20px'></i>
+       Exam Seating Plan <i class="fa fa-caret-down"></i></a>
+       <div class="dropdown-container">
+          <a href="#">Exam dept Login</a>
+          <a href="#">Add Rooms</a>
+          <a href="#">View Rooms</a>
+          <a href="#">Generate</a>
+          <a href="#">Show Results</a>
+        </div>
+
+       <a href="{{url_for('houseMasterLoginPage')}}"><i class='fas fa-vote-yea' style='font-size:20px'></i>
+       Online Voting</a>
+    
+       <a href="{{url_for('applyLeaveLoginPage')}}"><i class='fas fa-external-link-alt' style='font-size:20px'></i>
+      Apply Leave</a>
+
+      <a href="{{url_for('wellnessCenterPage')}}">
+      <i class='fa fa-medkit' style='font-size:20px'></i>
+      Wellness Center</a>
+
+      <a href="#">                   
+      <i class='fas fa-images' style='font-size:20px'></i>
+      Gallery</a>
+    
+      <a href="#">
+      <i class='far fa-file-alt' style='font-size:20px'></i>
+      View Reports</a>
+
+      <a href="#">
+      <i class='fa fa-cutlery' style='font-size:20px'></i>
+      Mess Reports</a>
+
+
+  </div>
+
+  <div class="maincard">
+<div class="row" style="overflow:auto;">
+    <h1 style="text-align: center;padding-top: 20px;padding-bottom: 20px;">View Reports</h1>
+<div class="col">
+<div class="card">
+  <div class="card-header">Daily Student Sick Reports</div>
+  <div class="card-main">
+    <div class="main-description">{{reports.sickStudentCount}}</div>
+    <p><a href="{{url_for('dailySickRegisterPage',hsRefLink=reports.hsRefLink)}}"><i class="fa fa-plus-square"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{url_for('sickStudentsDetailsPage')}}"><i class="fa fa-eye"></i></a></p>
+
+    
+  </div>
+</div>
+</div>
+<div class="col">
+<div class="card">
+  <div class="card-header">Student Sick Diet Reports</div>
+  <div class="card-main">
+     <div class="main-description">{{reports.sickDietReport}}</div>
+    <a href="{{url_for('sickDietOverallReportsPage')}}"><i class="fa fa-eye"></i></a>
+  </div>
+</div>
+</div>
+<div class="col">
+<div class="card">
+  <div class="card-header">Observation Reports</div>
+  <div class="card-main">
+     <div class="main-description">{{reports.sickDietObservation}}</div>
+    <a href="{{url_for('sickDietObservationReportsPage')}}"><i class="fa fa-eye"></i></a>
+  </div>
+</div>
+</div>
+<div class="col">
+<div class="card">
+  <div class="card-header">Recovery Reports</div>
+  <div class="card-main">
+     <div class="main-description">{{reports.sickDietRecovery}}</div>
+    <a href="{{url_for('sickDietRecoveryReportsPage')}}"><i class="fa fa-eye"></i></a>
+  </div>
+</div>
+</div>
+<div class="col">
+<div class="card">
+  <div class="card-header">Students Fitness Statistics</div>
+  <div class="card-main">
+     <div class="main-description">{{reports.totalStudentCount}}</div>
+    <a href="{{url_for('studentsDetailsPage')}}"><i class="fa fa-eye"></i></a>
+  </div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+
+<div class="foot">
+      <p style="text-align: center;padding-top:30px;padding-bottom: 30px; "><a style="text-decoration: none;color: white;"href="https://secure-space.in/">Secure Space Pvt Ltd.</a></p>
+</div>
+
+      <script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Academic Staff</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index_style.CSS')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/academic_style.CSS')}}">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="topbar">
+  <img style="width:100%;" src="{{url_for('static',filename='images/header.png')}}">
+ 
+</div>
+<div>
+<div style="overflow: auto;width: 100%;">
+  <div class="menu">
+
+       <a href="{{url_for('indexPage')}}">
+       <i class="fa fa-home" style="font-size:20px"></i>
+        <b>Home</b>
+       </a>
+     
+       <a href="{{url_for('academicStaffPage')}}">
+       <i class='fas fa-chalkboard-teacher' style='font-size:20px'></i>Academic Staff
+        
+       </a>
+
+       <a href="{{url_for('codingStaffPage')}}">
+       <i class='fas fa-user-graduate' style='font-size:20px'></i>
+       Coding Staff
+       </a>
+
+       <a href="{{url_for('timetablePage')}}"><i class='far fa-calendar-alt' style='font-size:20px'></i>
+       Time Table</a>
+
+       <a href="{{url_for('houseMasterLoginPage')}}"><i class='fas fa-university' style='font-size:20px'></i>
+       Class Bank</a>
+    
+       <a href="{{url_for('applyLeaveLoginPage')}}"><i class='fas fa-external-link-alt' style='font-size:20px'></i>
+      Apply Leave</a>
+
+      <a href="#">
+      <i class='fa fa-medkit' style='font-size:20px'></i>
+      Wellness Center</a>
+
+      <a href="#">                   
+      <i class='fas fa-images' style='font-size:20px'></i>
+      Gallery</a>
+    
+      <a href="#">
+      <i class='far fa-file-alt' style='font-size:20px'></i>
+      View Reports</a>
+
+      <a href="#">
+      <i class='fa fa-cutlery' style='font-size:20px'></i>
+      Mess Reports</a>
+
+
+  </div>
+  <div class="cards" >
+    <div class="maincontainer" > 
+      <div class="thecard">
+        <div class="thefront"><h4>Nagamanimala</h4><br>
+        <img src="{{url_for('static', filename='images/pri.png')}}" style="width: 180px ; height: 160px">
+        </div>
+        <div class="theback"><h4><b>Designation :</b></h4><h5>Principal of Coding Academy</h5><h4><b>Qualification:</b></h4>
+      <h5>MSc<br>  B.Ed</h5>
+      </div>
+      </div>
+  
+      <div class="thecard">
+        <div class="thefront"><h4>K.Sudharshan</h4><br>
+        <img src="{{url_for('static', filename='images/Sudharshan.jpeg')}}" style="width: 180px ; height: 160px">
+        </div>
+  
+        <div class="theback"><h4><b>Designation :</b></h4><h5>TGT Maths</h5><h4><b>Qualification:</b></h4>
+      <h5>MSc<br>  B.Ed</h5><h4><b>Subject:</b></h4><h5>Maths</h5>
+      </div>
+      </div>
+    
+    
+    <div class="thecard">
+      <div class="thefront"><h4>Haseena Begum</h4><br>
+      <img src="{{url_for('static', filename='images/Haseena.jpeg')}}" style="width: 180px ; height: 160px">
+      </div>
+
+      <div class="theback"><h4><b>Designation :</b></h4><h5>TGT Social Studies</h5><h4><b>Qualification:</b></h4>
+      <h5>M.A (English)<br>  M.Com<br> B.Ed </h5><h4><b>Subject:</b></h4><h5>Social</h5>
+      </div>
+    </div>
+    <div class="thecard">
+      <div class="thefront"><h4>Mallika Rani Munjam</h4><br>
+      <img src="{{url_for('static', filename='images/Mallika.jpeg')}}" style="width: 180px ; height: 180px">
+      </div>
+      <div class="theback"><h4><b>Designation :</b></h4><h5>TGT English</h5><h4><b>Qualification:</b></h4>
+      <h5>M.A (English)<br>  M.Ed<br> PhD IN ELT</h5><h4><b>Subject:</b></h4><h5>English</h5>
+      </div>
+    </div>
+    
+    <div class="thecard">
+      <div class="thefront"><h4>Prasad Pandi</h4><br>
+      <img src="{{url_for('static', filename='images/prasad.jpeg')}}" style="width: 180px ; height: 180px">
+      </div>
+
+     <div class="theback"><h4><b>Designation :</b></h4><h5>TGT Maths</h5><h4><b>Qualification:</b></h4>
+      <h5>MCA<br>  MSc<br> BEd</h5><h4><b>Subject:</b></h4><h5>Maths</h5>
+      </div>
+    </div>
+    <div class="thecard">
+      <div class="thefront"><h4>J.Srilatha</h4><br>
+      <img src="{{url_for('static', filename='images/js.jpeg')}}" style="width: 180px ; height: 180px">
+      </div>
+
+      <div class="theback"><h4><b>Designation :</b></h4><h5>TGT Physical Science</h5><h4><b>Qualification:</b></h4>
+      <h5>M.S.C(Org.Chem)<br>  M.Ed</h5><h4><b>Subject:</b></h4><h5>Physical Science</h5>
+      </div>
+    </div>
+    <div class="thecard">
+      <div class="thefront"><h4>Srilatha Kamishetti</h4><br>
+      <img src="{{url_for('static', filename='images/KS.jpeg')}}" style="width: 180px ; height: 180px">
+      </div>
+
+      <div class="theback"><h4><b>Designation :</b></h4><h5>TGT Physical Science</h5><h4><b>Qualification:</b></h4>
+      <h5>MSC(Physics)<br>  B.Ed</h5><h4><b>Subject:</b></h4><h5>Physical Science</h5>
+      </div>
+    </div>
+    <div class="thecard">
+      <div class="thefront"><h4>T.Arpitha</h4><br>
+      <img src="{{url_for('static', filename='images/Arpitha.jpeg')}}" style="width: 180px ; height: 180px">
+      </div>
+      <div class="theback"><h4><b>Designation :</b></h4><h5>TGT Telugu</h5><h4><b>Qualification:</b></h4>
+      <h5>M.A<br>  B.Ed</h5><h4><b>Subject:</b></h4><h5>Telugu</h5>
+      </div>
+    </div>
+    <div class="thecard">
+      <div class="thefront"><h4>S.Manjula</h4><br>
+      <img src="{{url_for('static', filename='images/Manjula1.jpeg')}}" style="width: 180px ; height: 180px">
+      </div>
+
+      <div class="theback"><h4><b>Designation :</b></h4><h5>TGT Telugu</h5><h4><b>Qualification:</b></h4>
+      <h5>MA(TPT)</h5><h4><b>Subject:</b></h4><h5>Telugu</h5>
+      </div>
+    </div>
+    <div class="thecard">
+      <div class="thefront"><h4>RamaDevi Kasam</h4><br>
+      <img src="{{url_for('static', filename='images/RamaDevi.jpeg')}}" style="width: 180px ; height: 180px">
+      </div>
+
+      <div class="theback"><h4><b>Designation :</b></h4><h5>TGT Social Studies</h5><h4><b>Qualification:</b></h4>
+      <h5>M.A<br>  B.Ed</h5><h4><b>Subject:</b></h4><h5>Social Studies</h5>
+      </div>
+    </div>
+    <div class="thecard">
+      <div class="thefront"><h4>M.Suhasini</h4><br>
+      <img src="{{url_for('static', filename='images/Suhasinii.jpeg')}}" style="width: 180px ; height: 180px">
+      </div>
+
+      <div class="theback"><h4><b>Designation :</b></h4><h5>TGT Maths</h5><h4><b>Qualification:</b></h4>
+      <h5>M.C.A<br>  M.Ed</h5><h4><b>Subject:</b></h4><h5>Mathematics</h5>
+      </div>
+    </div>
+    <div class="thecard">
+      <div class="thefront"><h4>M.Hima Bindhu</h4><br>
+      <img src="{{url_for('static', filename='images/Bindhu.jpeg')}}" style="width: 180px ; height: 180px">
+      </div>
+      <div class="theback"><h4><b>Designation :</b></h4><h5>TGT Biological Science </h5><h4><b>Qualification:</b></h4>
+      <h5>MSc Botony<br>  M.Ed<br> PhD IN ELT</h5><h4><b>Subject:</b></h4><h5>Biological Science</h5>
+      </div>
+    </div>
+    <div class="thecard">
+      <div class="thefront"><h4>Naveen Kumar Sankoju</h4><br>
+      <img src="{{url_for('static', filename='images/Naveen.jpeg')}}" style="width: 180px ; height: 180px">
+      </div>
+
+      <div class="theback"><h4><b>Designation :</b></h4><h5>TGT English</h5><h4><b>Qualification:</b></h4>
+      <h5>M.A (English)<br>  B.Ed<br> PGDTE</h5><h4><b>Subject:</b></h4><h5>English</h5>
+      </div>
+    </div>
+    </div>  
+  </div>
+</div>
+  </div>
+  <div class="foot">
+        <p style="text-align: center;padding-top:30px;padding-bottom: 30px; "><a style="text-decoration: none;color: white;"href="https://secure-space.in/">Secure Space Pvt Ltd.</a></p>
+  </div>
+        
+</body>
+</html>
+

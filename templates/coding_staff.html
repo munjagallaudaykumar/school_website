@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coding Staff</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index_style.CSS')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/academic_style.CSS')}}">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="topbar">
+  <img style="width:100%;" src="{{url_for('static',filename='images/header.png')}}">
+ 
+</div>
+<div>
+<div style="overflow: auto;width: 100%;">
+  <div class="menu">
+
+       <a href="{{url_for('indexPage')}}">
+       <i class="fa fa-home" style="font-size:20px"></i>
+        <b>Home</b>
+       </a>
+     
+       <a href="{{url_for('academicStaffPage')}}">
+       <i class='fas fa-chalkboard-teacher' style='font-size:20px'></i>Academic Staff
+        
+       </a>
+
+       <a href="">
+       <i class='fas fa-user-graduate' style='font-size:20px'></i>
+       Coding Staff
+       </a>
+
+       <a href="{{url_for('timetablePage')}}"><i class='far fa-calendar-alt' style='font-size:20px'></i>
+       Time Table</a>
+
+       <a href="{{url_for('houseMasterLoginPage')}}"><i class='fas fa-university' style='font-size:20px'></i>
+       Class Bank</a>
+    
+       <a href="{{url_for('applyLeaveLoginPage')}}"><i class='fas fa-external-link-alt' style='font-size:20px'></i>
+      Apply Leave</a>
+
+      <a href="{{url_for('wellnessCenterPage')}}">
+      <i class='fa fa-medkit' style='font-size:20px'></i>
+      Wellness Center</a>
+
+      <a href="#">                   
+      <i class='fas fa-images' style='font-size:20px'></i>
+      Gallery</a>
+    
+      <a href="#">
+      <i class='far fa-file-alt' style='font-size:20px'></i>
+      View Reports</a>
+
+      <a href="#">
+      <i class='fa fa-cutlery' style='font-size:20px'></i>
+      Mess Reports</a>
+
+
+  </div>
+  <div class="cards" >
+    <div class="maincontainer" > 
+      <div class="thecard">
+        <div class="thefront"><h4>Varsha Yadhati</h4><br>
+               <img src="{{url_for('static', filename='images/varsha.jpeg')}}" style="width: 180px ; height: 160px">
+        </div>
+        <div class="theback"><h4><b>Designation :</b></h4><h5>Technical Manager</h5><h4><b></b></h4>
+            <h5>   </h5><h4><b></b></h4><h5>   </h5>
+        </div>
+      </div> 
+
+
+      <div class="thecard">
+        <div class="thefront"><h4>Syed Muthahar</h4><br>
+        <img src="{{url_for('static', filename='images/syed.jpeg')}}" style="width: 180px ; height: 160px">
+        </div>
+  
+        <div class="theback"><h4><b>Designation :</b></h4><h5>Head of Dept.IoT</h5><h4><b>Qualification:</b></h4>
+      <h5>M.Tech in Embedded System<br>  </h5><h4><b>Subject:</b></h4><h5>IoT</h5>
+      </div>
+      </div>  
+      <div class="thecard">
+        <div class="thefront"><h4>Saral Kumar</h4><br>
+        <img src="{{url_for('static', filename='images/saral.png')}}" style="width: 180px ; height: 160px">
+        </div>
+  
+        <div class="theback"><h4><b>Designation :</b></h4><h5>Head of Dept.Coding</h5><h4><b>Qualification:</b></h4>
+      <h5>M.Tech in Computer Science</h5><h4><b>Subject:</b></h4><h5>Coding</h5>
+      </div>
+      </div>
+
+
+    
+    <div class="thecard">
+        <div class="thefront"><h4>G.Umarani</h4><br>
+        <img src="{{url_for('static', filename='images/uma2.jpeg')}}" style="width: 180px ; height: 160px">
+        </div>
+  
+        <div class="theback"><h4><b>Designation :</b></h4><h5>Technical Trainer</h5><h4><b>Qualification:</b></h4>
+      <h5>B.Tech in Electronics and communication</h5><h4><b>Subject:</b></h4><h5>Coding</h5>
+      </div>
+      </div>
+
+
+    <div class="thecard">
+        <div class="thefront"><h4>B.Yellesh</h4><br>
+        <img src="{{url_for('static', filename='images/yellesh.jpeg')}}" style="width: 180px ; height: 160px">
+        </div>
+  
+        <div class="theback"><h4><b>Designation :</b></h4><h5>IoT Trainer</h5><h4><b>Qualification:</b></h4>
+      <h5>B.Tech in Computer Science </h5><h4><b>Subject:</b></h4><h5>IoT</h5>
+      </div>
+      </div>
+
+      <div class="thecard">
+        <div class="thefront"><h4>V.Ramya</h4><br>
+        <img src="{{url_for('static', filename='images/ramya.jpeg')}}" style="width: 180px ; height: 160px">
+        </div>
+  
+        <div class="theback"><h4><b>Designation :</b></h4><h5>Technical Trainer</h5><h4><b>Qualification:</b></h4>
+      <h5>B.Tech in Electronics and communication</h5><h5>B.Ed</h5><h4><b>Subject:</b></h4><h5>Coding</h5>
+      </div>
+      </div>
+    
+    <div class="thecard">
+        <div class="thefront"><h4>R.Chithra</h4><br>
+        <img src="{{url_for('static', filename='images/chithra.jpeg')}}" style="width: 180px ; height: 160px">
+        </div>
+  
+        <div class="theback"><h4><b>Designation :</b></h4><h5>Technical Trainer</h5><h4><b>Qualification:</b></h4>
+      <h5>B.Tech in Electronics and communication</h5><h4><b>Subject:</b></h4><h5>Coding</h5>
+      </div>
+      </div>
+
+
+    <div class="thecard">
+        <div class="thefront"><h4>D.Nikhil</h4><br>
+        <img src="{{url_for('static', filename='images/nikhil.jpeg')}}" style="width: 180px ; height: 160px">
+        </div>
+  
+        <div class="theback"><h4><b>Designation :</b></h4><h5>Technical Trainer</h5><h4><b>Qualification:</b></h4>
+      <h5>MCA</h5><h4><b>Subject:</b></h4><h5>Coding</h5>
+      </div>
+      </div>
+
+   <div class="thecard">
+        <div class="thefront"><h4>M.Uday</h4><br>
+        <img src="{{url_for('static', filename='images/uday.jpg')}}" style="width: 180px ; height: 160px">
+        </div>
+  
+        <div class="theback"><h4><b>Designation :</b></h4><h5>IoT Trainer</h5><h4><b>Qualification:</b></h4>
+      <h5>Mechanical Engineer</h5><h4><b>Subject:</b></h4><h5>IoT</h5>
+      </div>
+      </div>
+    
+        
+    
+    
+    
+    </div>  
+  </div>
+</div>
+  </div>
+  <div class="foot">
+        <p style="text-align: center;padding-top:30px;padding-bottom: 30px; "><a style="text-decoration: none;color: white;"href="https://secure-space.in/">Secure Space Pvt Ltd.</a></p>
+  </div>
+        
+</body>
+</html>
+

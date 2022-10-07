@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Teacher Login</title>
+<meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/teacher_log_style.css') }}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="topbar">
+  <img style="width:100%;" src="{{url_for('static',filename='images/header.png')}}">
+ 
+</div>
+<div>
+<div style="overflow: auto;width: 100%;">
+   <div class="menu">
+       <a href="{{url_for('indexPage')}}">
+       <i class="fa fa-home" style="font-size:20px"></i>
+        <b>Home</b>
+       </a>
+     
+       <a href="{{url_for('academicStaffPage')}}">
+       <i class='fas fa-chalkboard-teacher' style='font-size:20px'></i>Academic Staff
+        
+       </a>
+
+       <a href="{{url_for('codingStaffPage')}}">
+       <i class='fas fa-user-graduate' style='font-size:20px'></i>
+       Coding Staff
+       </a>
+
+       <a href="{{url_for('timetablePage')}}"><i class='far fa-calendar-alt' style='font-size:20px'></i>
+       Time Table</a>
+
+       <a href="{{url_for('houseMasterLoginPage')}}"><i class='fas fa-university' style='font-size:20px'></i>
+       Class Bank</a>
+    
+       <a href="{{url_for('applyLeaveLoginPage')}}"><i class='fas fa-external-link-alt' style='font-size:20px'></i>
+      Apply Leave</a>
+
+      <a href="{{url_for('wellnessCenterPage')}}">
+      <i class='fa fa-medkit' style='font-size:20px'></i>
+      Wellness Center</a>
+
+      <a href="#">                   
+      <i class='fas fa-images' style='font-size:20px'></i>
+      Gallery</a>
+    
+      <a href="#">
+      <i class='far fa-file-alt' style='font-size:20px'></i>
+      View Reports</a>
+
+      <a href="#">
+      <i class='fa fa-cutlery' style='font-size:20px'></i>
+      Mess Reports</a>
+
+
+  </div>
+      
+
+<div class="login" >
+       <h2 style="text-align: center;">House Master Login</h2><br>
+       {% with messages=get_flashed_messages()%}
+    {% if messages %}
+    
+    {% for message in messages %}
+    <div class="" style="padding: 10px; color: white; border:3px;">
+        <!-- <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>  -->
+         {{message}}.
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+      <form action="" method="post" style="border-radius: 15px 15px 0px 0px;">
+        <div class="container">
+            <label for="uname"><b>Email Id</b></label>
+            <input style="border-radius: 15px 15px 15px 15px;" type="text" placeholder="Enter Email" name="emailId" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input style="border-radius: 15px 15px 15px 15px;" type="password" placeholder="Enter Password" name="password" required>
+                
+            <button style="border-radius: 15px 15px 15px 15px;" type="submit">Login</button>
+            <label>
+              
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          If Don't Have Account <a href="{{url_for('houseMasterRegisterPage')}}"><font style='color: darkgreen;'>Register</font></a>
+          <span class="psw">Forgot <a href="{{url_for('houseMasterForgotPasswordPage')}}"><font style='color: orangered'>Password?</font></a></span>
+        </div>
+
+      </form>
+
+</div> 
+
+</div>
+</div>
+
+<div class="foot">
+      <p style="text-align: center;padding-top:30px;padding-bottom: 30px; "><a style="text-decoration: none;color: white;"href="https://secure-space.in/">Secure Space Pvt Ltd.</a></p>
+</div>
+
+</body>
+</html>

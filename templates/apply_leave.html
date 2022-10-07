@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Applyleave</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/apply_leave_style.CSS')}}">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="topbar">
+  <img style="width:100%;" src="{{url_for('static',filename='images/header.png')}}">
+ 
+</div>
+
+<div>
+<div style="overflow: auto;width: 100%;">
+  <div class="menu">
+       <a href="#">
+       <i class="fa fa-home" style="font-size:20px"></i>
+        <b>Home</b>
+       </a>
+     
+       <a href="#">
+       <i class='fas fa-chalkboard-teacher' style='font-size:20px'></i>Academic Teachers
+        
+       </a>
+
+       <a href="#">
+       <i class='fas fa-user-graduate' style='font-size:20px'></i>
+       Coding Trainers
+       </a>
+
+       <a href="#"><i class='far fa-calendar-alt' style='font-size:20px'></i>
+       Time Table</a>
+
+       <a href="{{url_for('houseMasterLoginPage')}}"><i class='fas fa-university' style='font-size:20px'></i>
+       Class Bank</a>
+    
+       <a href="{{url_for('applyLeaveLoginPage')}}"><i class='fas fa-external-link-alt' style='font-size:20px'></i>
+      Apply Leave</a>
+
+      <a href="#">
+      <i class='fas fa-external-link-alt' style='font-size:20px'></i>
+      House Master Registration</a>
+
+      <a href="#">                   
+      <i class='fas fa-images' style='font-size:20px'></i>
+      Gallery</a>
+    
+      <a href="#">
+      <i class='far fa-file-alt' style='font-size:20px'></i>
+      View Reports</a>
+
+      <a href="#">
+      <i class='fas fa-university' style='font-size:20px'></i>
+      Class Bank</a>
+
+
+  </div>
+  <div class="row" style="overflow: auto;">
+      <div class="column">
+        <div class="card">
+          <div >
+           <h1>{{leaves.compOfLeaves}}</h1><br>
+            <p style="font-size: 20px;">Compoff leaves</p>
+          </div>
+          <div class="icon-box">
+              <i class='far fa-address-card' style='font-size:36px'></i>
+          </div>
+  
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div>
+              <h1>{{leaves.paidLeaves}}</h1><br>
+              <p style="font-size: 20px;">Paid leaves</p>
+          </div>
+          <div class="icon-box">
+              <i class='far fa-address-card' style='font-size:36px'></i>
+          </div>
+      
+        </div>
+      </div>
+  
+      <div class="column">
+        <div class="card">
+          <div>
+            <h1>{{leaves.casualLeaves}}</h1><br>
+            <p style="font-size: 20px;">Casual leaves</p>
+          </div>
+          <div class="icon-box">
+              <i class='far fa-address-card' style='font-size:36px'></i>
+          </div>
+        </div>
+      </div>
+  
+      <div class="column">
+        <div class="card">
+          <div>
+            <h1>{{leaves.totalLeaves}}</h1><br>
+            <p style="font-size: 20px;">Total leaves</p>
+          </div>
+          <div class="icon-box">
+              <i class='far fa-address-card' style='font-size:36px'></i>
+          </div>
+        </div>
+      </div> 
+  </div>
+<div>
+<div class="container">
+    <div class="title">Apply leave</div>
+    <div class="content">
+      <form action="" method="POST">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Trainer Name:</span>
+            <input type="text" name = "trainerName" placeholder="Enter Name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Type of leave:</span>
+            <select style="height:45px;width:100%;" >  
+              <option value = "Compoff"> Compoff </option>
+              <option value = "Casual"> Casual </option>
+              <option value = "Paid"> Paid </option>
+              </select> 
+          </div>
+          <div class="input-box">
+            <span class="details">From:</span>
+            <input type="date" name = "fromDate" required>
+          </div>
+          <div class="input-box">
+            <span class="details">To:</span>
+            <input type="date" name = "toDate" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Hr email id:</span>
+            <input type="text" name = "hrEmail" placeholder="Enter hr mail id" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Accounts email id:</span>
+            <input type="text" name ="accountEmail" placeholder="Enter mail id" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Manager email id:</span>
+            <input type="text" name ="managerEmail" placeholder="Enter mail id" required>
+          </div>
+          <div class="input-box">
+            
+          </div>
+          <div class="input-box">
+            <span class="details">Reason:</span>
+            <input style="height:100%;width:200%;" type="text" name ="reasonApply" placeholder="Enter Reason" required>
+          </div>
+        </div>
+        
+        <div class="button">
+          <input type="submit" value="submit">
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+</div>
+</div>
+<div> 
+<div class="foot">
+      <p style="text-align: center;padding-top:30px;padding-bottom: 30px; ">Secure space pvt ltd</p>
+</div>
+</div>
+</body>
+</html>
